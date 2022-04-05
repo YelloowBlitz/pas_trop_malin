@@ -10,7 +10,7 @@ edition = "2021"
 #my_logger = { path = "../my_logger" }
 log = "0.4"
 tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
-serenity = { version = "0.10", default-features = false, features = ["client", "gateway", "rustls_backend", "model", "cache"] }
+serenity = { version = "0.10", default-features = false, features = ["client", "gateway", "rustls_backend", "model", "cache", "unstable_discord_api"] }
 # Features
 regex = "1.5"
 reqwest = "0.11"
