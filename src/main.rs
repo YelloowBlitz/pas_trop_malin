@@ -164,8 +164,8 @@ impl EventHandler for Handler {
 async fn main() {
     // my_logger::set_logger(LevelFilter::Debug);
 
-    // let token = "MzUwNjg5NDIzODc4Mzg5NzYx.WaBa-g.Hl5N9mX4qIzYV9KPdQf3uOStjN8";
-    let token = "OTYwODgyNzM1MTMwNDg4OTAy.Ykw5yA.lLAQmK-Hy6pJk5oS-w3sIlYTcq8";
+    let token = std::env::var("DISCORD_TOKEN")
+        .expect("Expected a token in the environment");
 
     let mut client = Client::builder(token)
         .event_handler(Handler)
